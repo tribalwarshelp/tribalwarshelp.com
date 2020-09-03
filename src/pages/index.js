@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     "& > *": {
       padding: theme.spacing(0.5),
     },
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
 }))
 
@@ -44,6 +47,7 @@ const IndexPage = ({ location }) => {
             author
             contactUrl
             scriptsUrl
+            mapToolUrl
           }
         }
       }
@@ -72,6 +76,9 @@ const IndexPage = ({ location }) => {
           </div>
           <div>
             <LinkButton href={siteMetadata.dcbotUrl}>Discord Bot</LinkButton>
+          </div>
+          <div>
+            <LinkButton href={siteMetadata.mapToolUrl}>Map tool</LinkButton>
           </div>
           <div>
             <LinkButton href={siteMetadata.scriptsUrl}>Scripts</LinkButton>

@@ -9,6 +9,7 @@ module.exports = {
     author: "Dawid Wysokiński",
     contactUrl: "http://dawid-wysokinski.pl/#contact",
     scriptsUrl: "https://github.com/tribalwarshelp/scripts",
+    mapToolUrl: "https://map.tribalwarshelp.com",
     siteUrl,
   },
   plugins: [
