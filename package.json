@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "tribalwarshelp.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Navigation between all TWHelp projects",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dawid Wysokiński <dawidwysokinski000@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-graphql": "^2.11.0",
     "gatsby-theme-material-ui": "^1.0.12",
     "gatsby-transformer-sharp": "^2.5.7",
     "prop-types": "^15.7.2",
@@ -32,7 +33,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -44,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tribalwarshelp/tribalwarshelp.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/tribalwarshelp/tribalwarshelp.com/issues"
   }
 }

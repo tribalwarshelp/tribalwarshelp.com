@@ -2,12 +2,13 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography, Button, Box, Container, Link } from "@material-ui/core"
+import { Typography, Button, Box, Container } from "@material-ui/core"
 import SEO from "../components/SEO"
+import Link from "../components/Link"
 
-const LinkButton = ({ children, href }) => {
+const LinkButton = ({ children, href, to }) => {
   return (
-    <Link href={href} underline="none">
+    <Link href={href} to={to} underline="none">
       <Button size="large" color="secondary" variant="contained">
         <Typography variant="h4">{children}</Typography>
       </Button>
@@ -47,7 +48,6 @@ const IndexPage = ({ location }) => {
             author
             contactUrl
             scriptsUrl
-            mapToolUrl
           }
         }
       }
@@ -62,9 +62,10 @@ const IndexPage = ({ location }) => {
       justifyContent="center"
       textAlign="center"
       flexDirection="column"
+      paddingY={5}
     >
       <SEO title="Home" pathname={location.pathname} />
-      <Container>
+      <Container component="main">
         <header>
           <Typography gutterBottom variant="h1">
             TWHelp
@@ -78,7 +79,9 @@ const IndexPage = ({ location }) => {
             <LinkButton href={siteMetadata.dcbotUrl}>Discord Bot</LinkButton>
           </div>
           <div>
-            <LinkButton href={siteMetadata.mapToolUrl}>Map tool</LinkButton>
+            <LinkButton to={"/supported-versions"}>
+              Stat tracking website
+            </LinkButton>
           </div>
           <div>
             <LinkButton href={siteMetadata.scriptsUrl}>Scripts</LinkButton>
