@@ -41,7 +41,7 @@ function SupportedVersionsPage({ location }) {
       }
     }
   `)
-  console.log(versions, baseUrl)
+
   return (
     <Box
       display="flex"
@@ -54,15 +54,18 @@ function SupportedVersionsPage({ location }) {
       <SEO pathname={location.pathname} title="Supported versions" />
       <Container>
         <header>
-          <Typography variant="h1" align="center" gutterBottom>
+          <Typography variant="h1" align="center">
             <Link color="secondary" underline="none" to="/">
               TWHelp
             </Link>
           </Typography>
+          <Typography variant="h2" align="center" gutterBottom>
+            Version selection
+          </Typography>
         </header>
         <Grid container spacing={2}>
           {versions.map(version => (
-            <Grid item xs={3}>
+            <Grid key={version.code} item xs={12} sm={6} md={4} lg={3}>
               <Card>
                 <CardHeader
                   title={
