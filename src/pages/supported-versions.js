@@ -55,9 +55,7 @@ function SupportedVersionsPage({ location }) {
       <Container>
         <header>
           <Typography variant="h1" align="center">
-            <Link color="secondary" underline="none" to="/">
-              TWHelp
-            </Link>
+            <Link to="/">TWHelp</Link>
           </Typography>
           <Typography variant="h2" align="center" gutterBottom>
             Version selection
@@ -69,11 +67,7 @@ function SupportedVersionsPage({ location }) {
               <Card>
                 <CardHeader
                   title={
-                    <Link
-                      color="secondary"
-                      underline="none"
-                      href={buildURLToVersionPage(baseUrl, version.code)}
-                    >
+                    <Link href={buildURLToVersionPage(baseUrl, version.code)}>
                       {version.host}
                     </Link>
                   }

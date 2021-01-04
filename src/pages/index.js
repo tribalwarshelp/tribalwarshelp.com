@@ -8,8 +8,8 @@ import Link from '../components/Link';
 
 const LinkButton = ({ children, href, to }) => {
   return (
-    <Link href={href} to={to} underline="none">
-      <Button size="large" color="secondary" variant="contained">
+    <Link href={href} to={to}>
+      <Button size="large" color="primary" variant="contained">
         <Typography variant="h4">{children}</Typography>
       </Button>
     </Link>
