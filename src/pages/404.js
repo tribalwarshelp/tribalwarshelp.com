@@ -18,9 +18,7 @@ const NotFoundPage = ({ location }) => (
         Page not found
       </Typography>
       <Typography variant="h2">
-        <Link color="secondary" to="/">
-          Back to our site
-        </Link>
+        <Link to="/">Back to our site</Link>
       </Typography>
     </Container>
   </Box>
