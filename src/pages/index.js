@@ -1,10 +1,10 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Button, Box, Container } from "@material-ui/core";
-import SEO from "../components/SEO";
-import Link from "../components/Link";
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Button, Box, Container } from '@material-ui/core';
+import SEO from '../components/SEO';
+import Link from '../components/Link';
 
 const LinkButton = ({ children, href, to }) => {
   return (
@@ -19,16 +19,16 @@ const LinkButton = ({ children, href, to }) => {
 const useStyles = makeStyles(theme => ({
   nav: {
     marginBottom: theme.spacing(3),
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "center",
-    "& > *": {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '& > *': {
       padding: theme.spacing(0.5),
     },
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column",
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
     },
   },
 }));
@@ -79,7 +79,7 @@ const IndexPage = ({ location }) => {
             <LinkButton href={siteMetadata.dcbotUrl}>Discord Bot</LinkButton>
           </div>
           <div>
-            <LinkButton to={"/supported-versions"}>
+            <LinkButton to={'/supported-versions'}>
               Stat tracking website
             </LinkButton>
           </div>

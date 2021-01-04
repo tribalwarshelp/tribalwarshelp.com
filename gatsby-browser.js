@@ -1,1 +1,1 @@
-import "@kichiyaki/roboto";
+import '@kichiyaki/roboto';

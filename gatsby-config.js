@@ -1,16 +1,16 @@
-const baseUrl = "tribalwarshelp.com";
-const siteUrl = "https://" + baseUrl;
-const apiUrl = "https://api." + baseUrl;
+const baseUrl = 'tribalwarshelp.com';
+const siteUrl = 'https://' + baseUrl;
+const apiUrl = 'https://api.' + baseUrl;
 
 module.exports = {
   siteMetadata: {
     title: `TWHelp`,
     description: `Tools for the popular online game TribalWars.`,
-    dcbotUrl: "https://dcbot." + baseUrl,
+    dcbotUrl: 'https://dcbot.' + baseUrl,
     apiUrl,
-    author: "Dawid Wysokiński",
-    contactUrl: "http://dawid-wysokinski.pl/#contact",
-    scriptsUrl: "https://github.com/tribalwarshelp/scripts",
+    author: 'Dawid Wysokiński',
+    contactUrl: 'http://dawid-wysokinski.pl/#contact',
+    scriptsUrl: 'https://github.com/tribalwarshelp/scripts',
     siteUrl,
     baseUrl,
   },
@@ -45,29 +45,29 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: siteUrl,
-        sitemap: siteUrl + "/sitemap.xml",
+        sitemap: siteUrl + '/sitemap.xml',
         env: {
           development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
+            policy: [{ userAgent: '*', allow: '/' }],
           },
         },
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-source-graphql',
       options: {
         // This type will contain remote schema Query type
-        typeName: "twhelp",
+        typeName: 'twhelp',
         // This is the field under which it's accessible
-        fieldName: "twhelp",
+        fieldName: 'twhelp',
         // URL to query from
-        url: apiUrl + "/graphql",
+        url: apiUrl + '/graphql',
       },
     },
   ],

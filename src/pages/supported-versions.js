@@ -1,5 +1,5 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import {
   Box,
@@ -8,9 +8,9 @@ import {
   Grid,
   Container,
   Typography,
-} from "@material-ui/core";
-import Link from "../components/Link";
-import SEO from "../components/SEO";
+} from '@material-ui/core';
+import Link from '../components/Link';
+import SEO from '../components/SEO';
 
 const buildURLToVersionPage = (baseUrl, code) => {
   return `https://${code}.${baseUrl}`;

@@ -1,6 +1,6 @@
-import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import { Link as MUILink } from "@material-ui/core";
+import React from 'react';
+import { Link as GatsbyLink } from 'gatsby';
+import { Link as MUILink } from '@material-ui/core';
 
 function Link({ href, to, ...rest }) {
   if (to) {
