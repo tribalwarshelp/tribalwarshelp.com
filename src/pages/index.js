@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { makeStyles } from "@material-ui/core/styles"
-import { Typography, Button, Box, Container } from "@material-ui/core"
-import SEO from "../components/SEO"
-import Link from "../components/Link"
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Button, Box, Container } from "@material-ui/core";
+import SEO from "../components/SEO";
+import Link from "../components/Link";
 
 const LinkButton = ({ children, href, to }) => {
   return (
@@ -13,8 +13,8 @@ const LinkButton = ({ children, href, to }) => {
         <Typography variant="h4">{children}</Typography>
       </Button>
     </Link>
-  )
-}
+  );
+};
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
       flexDirection: "column",
     },
   },
-}))
+}));
 
 const IndexPage = ({ location }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const {
     site: { siteMetadata },
@@ -52,7 +52,7 @@ const IndexPage = ({ location }) => {
         }
       }
     `
-  )
+  );
 
   return (
     <Box
@@ -100,7 +100,7 @@ const IndexPage = ({ location }) => {
         </footer>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

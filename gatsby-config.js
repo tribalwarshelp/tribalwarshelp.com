@@ -1,6 +1,6 @@
-const baseUrl = "tribalwarshelp.com"
-const siteUrl = "https://" + baseUrl
-const apiUrl = "https://api." + baseUrl
+const baseUrl = "tribalwarshelp.com";
+const siteUrl = "https://" + baseUrl;
+const apiUrl = "https://api." + baseUrl;
 
 module.exports = {
   siteMetadata: {
@@ -37,7 +37,12 @@ module.exports = {
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-theme-material-ui`,
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: null,
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -66,4 +71,4 @@ module.exports = {
       },
     },
   ],
-}
+};

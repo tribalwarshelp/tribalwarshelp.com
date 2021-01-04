@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import {
   Box,
@@ -8,13 +8,13 @@ import {
   Grid,
   Container,
   Typography,
-} from "@material-ui/core"
-import Link from "../components/Link"
-import SEO from "../components/SEO"
+} from "@material-ui/core";
+import Link from "../components/Link";
+import SEO from "../components/SEO";
 
 const buildURLToVersionPage = (baseUrl, code) => {
-  return `https://${code}.${baseUrl}`
-}
+  return `https://${code}.${baseUrl}`;
+};
 
 function SupportedVersionsPage({ location }) {
   const {
@@ -40,7 +40,7 @@ function SupportedVersionsPage({ location }) {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Box
@@ -84,7 +84,7 @@ function SupportedVersionsPage({ location }) {
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }
 
-export default SupportedVersionsPage
+export default SupportedVersionsPage;

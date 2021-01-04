@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import { Typography, Box, Container } from "@material-ui/core"
-import { Link } from "gatsby-theme-material-ui"
-import SEO from "../components/SEO"
+import { Typography, Box, Container } from "@material-ui/core";
+import { Link } from "gatsby-theme-material-ui";
+import SEO from "../components/SEO";
 
 const NotFoundPage = ({ location }) => (
   <Box
@@ -24,6 +24,6 @@ const NotFoundPage = ({ location }) => (
       </Typography>
     </Container>
   </Box>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
