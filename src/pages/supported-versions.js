@@ -49,7 +49,7 @@ function SupportedVersionsPage({ location }) {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      paddingY={5}
+      paddingY={3}
     >
       <SEO pathname={location.pathname} title="Supported versions" />
       <Container>

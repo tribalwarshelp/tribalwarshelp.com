@@ -62,7 +62,7 @@ const IndexPage = ({ location }) => {
       justifyContent="center"
       textAlign="center"
       flexDirection="column"
-      paddingY={5}
+      paddingY={3}
     >
       <SEO title="Home" pathname={location.pathname} />
       <Container component="main">

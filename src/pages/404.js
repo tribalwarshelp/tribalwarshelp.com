@@ -11,6 +11,7 @@ const NotFoundPage = ({ location }) => (
     alignItems="center"
     justifyContent="center"
     textAlign="center"
+    paddingY={3}
   >
     <SEO title="404" pathname={location.pathname} />
     <Container>
