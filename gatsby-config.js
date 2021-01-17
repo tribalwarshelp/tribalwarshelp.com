@@ -9,7 +9,7 @@ module.exports = {
     dcbotUrl: 'https://dcbot.' + baseUrl,
     apiUrl,
     author: 'Dawid Wysokiński',
-    contactUrl: 'http://dawid-wysokinski.pl/#contact',
+    contactUrl: 'http://dwysokinski.me/#contact',
     scriptsUrl: 'https://github.com/tribalwarshelp/scripts',
     siteUrl,
     baseUrl,
