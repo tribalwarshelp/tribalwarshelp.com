@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Box, Container } from '@material-ui/core';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import Link from '../components/Link';
 
 const LinkButton = ({ children, href, to }) => {
@@ -64,7 +64,7 @@ const IndexPage = ({ location }) => {
       flexDirection="column"
       paddingY={3}
     >
-      <SEO title="Home" pathname={location.pathname} />
+      <Seo title="Home" pathname={location.pathname} />
       <Container component="main">
         <header>
           <Typography gutterBottom variant="h1">

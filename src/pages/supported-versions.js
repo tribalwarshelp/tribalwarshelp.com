@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import Link from '../components/Link';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 
 const buildURLToVersionPage = (baseUrl, code) => {
   return `https://${code}.${baseUrl}`;
@@ -51,14 +51,14 @@ function SupportedVersionsPage({ location }) {
       flexDirection="column"
       paddingY={3}
     >
-      <SEO pathname={location.pathname} title="Supported versions" />
+      <Seo pathname={location.pathname} title="Supported versions" />
       <Container>
         <header>
           <Typography variant="h1" align="center">
             <Link to="/">TWHelp</Link>
           </Typography>
           <Typography variant="h2" align="center" gutterBottom>
-            Version selection
+            Supported versions
           </Typography>
         </header>
         <Grid container spacing={2}>

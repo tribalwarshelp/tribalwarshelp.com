@@ -40,7 +40,16 @@ module.exports = {
     {
       resolve: `gatsby-theme-material-ui`,
       options: {
-        webFontsConfig: null,
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`],
+              },
+            ],
+          },
+        },
       },
     },
     `gatsby-plugin-sitemap`,

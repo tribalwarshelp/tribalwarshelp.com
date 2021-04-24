@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Typography, Box, Container } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 
 const NotFoundPage = ({ location }) => (
   <Box
@@ -13,7 +13,7 @@ const NotFoundPage = ({ location }) => (
     textAlign="center"
     paddingY={3}
   >
-    <SEO title="404" pathname={location.pathname} />
+    <Seo title="404" pathname={location.pathname} />
     <Container>
       <Typography variant="h1" gutterBottom>
         Page not found
