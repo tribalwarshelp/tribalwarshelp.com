@@ -2,7 +2,7 @@ FROM node:14.16.1-alpine as build-deps
 
 ENV NODE_ENV=production
 
-RUN npm install --global gatsby-cli
+RUN npm install --global gatsby-cli@3.3.0
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn

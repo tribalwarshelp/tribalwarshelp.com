@@ -12,6 +12,7 @@ jobs:
       # with credentials stored in the UI
       - run: |
           docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+      - run: sudo apt install make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
       # build the application image
       - run: docker build -t $DOCKER_LOGIN/twhelp-website:latest .
 
