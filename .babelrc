@@ -6,7 +6,7 @@
       {
         "@": ["./src"],
         "alias": {
-          "@components": "./src/components",
+          "@common": "./src/common",
           "@config": "./src/config",
           "@features": "./src/features",
           "@images": "./src/images",

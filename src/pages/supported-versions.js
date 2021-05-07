@@ -1,16 +1,17 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Route } from '@config/routing';
 
 import {
-  Box,
   Card,
   CardHeader,
-  Grid,
   Container,
+  Grid,
   Typography,
 } from '@material-ui/core';
-import Link from '../components/Link';
-import Seo from '../components/Seo';
+import Link from '@common/Link';
+import Seo from '@common/Seo';
+import Layout from '@common/Layout';
 
 const buildURLToVersionPage = (baseUrl, code) => {
   return `https://${code}.${baseUrl}`;
@@ -43,19 +44,12 @@ function SupportedVersionsPage({ location }) {
   `);
 
   return (
-    <Box
-      display="flex"
-      minHeight="100vh"
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
-      paddingY={3}
-    >
+    <Layout>
       <Seo pathname={location.pathname} title="Supported versions" />
       <Container>
         <header>
           <Typography variant="h1" align="center">
-            <Link to="/">TWHelp</Link>
+            <Link to={Route.IndexPage}>TWHelp</Link>
           </Typography>
           <Typography variant="h2" align="center" gutterBottom>
             Supported versions
@@ -77,7 +71,7 @@ function SupportedVersionsPage({ location }) {
           ))}
         </Grid>
       </Container>
-    </Box>
+    </Layout>
   );
 }
 

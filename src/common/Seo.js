@@ -67,7 +67,7 @@ function Seo({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:locale`,
-          content: `pl`,
+          content: `en`,
         },
         {
           name: `twitter:card`,

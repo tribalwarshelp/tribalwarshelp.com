@@ -1,28 +1,22 @@
 import React from 'react';
-
-import { Typography, Box, Container } from '@material-ui/core';
+import { Route } from '@config/routing';
+import { Typography, Container } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
-import Seo from '../components/Seo';
+import Seo from '@common/Seo';
+import Layout from '@common/Layout';
 
 const NotFoundPage = ({ location }) => (
-  <Box
-    display="flex"
-    minHeight="100vh"
-    alignItems="center"
-    justifyContent="center"
-    textAlign="center"
-    paddingY={3}
-  >
+  <Layout>
     <Seo title="404" pathname={location.pathname} />
     <Container>
-      <Typography variant="h1" gutterBottom>
+      <Typography variant="h1" gutterBottom align="center">
         Page not found
       </Typography>
-      <Typography variant="h2">
-        <Link to="/">Back to our site</Link>
+      <Typography variant="h2" align="center">
+        <Link to={Route.IndexPage}>Back to our site</Link>
       </Typography>
     </Container>
-  </Box>
+  </Layout>
 );
 
 export default NotFoundPage;

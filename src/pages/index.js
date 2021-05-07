@@ -1,10 +1,12 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Route } from '@config/routing';
 
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Button, Box, Container } from '@material-ui/core';
-import Seo from '../components/Seo';
-import Link from '../components/Link';
+import { Button, Container, Typography } from '@material-ui/core';
+import Seo from '@common/Seo';
+import Link from '@common/Link';
+import Layout from '@common/Layout';
 
 const LinkButton = ({ children, href, to }) => {
   return (
@@ -31,6 +33,9 @@ const useStyles = makeStyles(theme => ({
       flexDirection: 'column',
     },
   },
+  container: {
+    textAlign: 'center',
+  },
 }));
 
 const IndexPage = ({ location }) => {
@@ -46,6 +51,7 @@ const IndexPage = ({ location }) => {
             dcbotUrl
             apiUrl
             author
+            authorEmail
             contactUrl
             scriptsUrl
           }
@@ -55,17 +61,9 @@ const IndexPage = ({ location }) => {
   );
 
   return (
-    <Box
-      display="flex"
-      minHeight="100vh"
-      alignItems="center"
-      justifyContent="center"
-      textAlign="center"
-      flexDirection="column"
-      paddingY={3}
-    >
+    <Layout>
       <Seo title="Home" pathname={location.pathname} />
-      <Container component="main">
+      <Container component="main" className={classes.container}>
         <header>
           <Typography gutterBottom variant="h1">
             TWHelp
@@ -79,7 +77,7 @@ const IndexPage = ({ location }) => {
             <LinkButton href={siteMetadata.dcbotUrl}>Discord Bot</LinkButton>
           </div>
           <div>
-            <LinkButton to={'/supported-versions'}>
+            <LinkButton to={Route.SupportedVersions}>
               Stat tracking website
             </LinkButton>
           </div>
@@ -89,17 +87,17 @@ const IndexPage = ({ location }) => {
           <div>
             <LinkButton href={siteMetadata.contactUrl}>Contact</LinkButton>
           </div>
-          <Box width="100%">
-            <Typography variant="h4">More coming soon...</Typography>
-          </Box>
         </nav>
         <footer>
           <Typography>
-            &copy; {new Date().getFullYear()} {siteMetadata.author}
+            &copy; {new Date().getFullYear()}{' '}
+            <Link href={`mailto:${siteMetadata.authorEmail}`}>
+              {siteMetadata.author}
+            </Link>
           </Typography>
         </footer>
       </Container>
-    </Box>
+    </Layout>
   );
 };
 
