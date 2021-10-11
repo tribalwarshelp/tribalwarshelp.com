@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:14.17.6-browsers
+      - image: circleci/node:14.18.0-browsers
     working_directory: ~/twhelpwebsite
     steps:
       - checkout
