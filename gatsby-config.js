@@ -1,19 +1,19 @@
-const baseUrl = 'tribalwarshelp.com';
-const siteUrl = 'https://' + baseUrl;
-const apiUrl = 'https://api.' + baseUrl;
+const DOMAIN = 'tribalwarshelp.com';
+const SITE_URL = 'https://' + DOMAIN;
+const API_URL = 'https://api.' + DOMAIN;
 
 module.exports = {
   siteMetadata: {
     title: `TWHelp`,
     description: `Tools for the popular online game TribalWars.`,
-    dcbotUrl: 'https://dcbot.' + baseUrl,
-    apiUrl,
+    dcbotUrl: 'https://dcbot.' + DOMAIN,
+    apiUrl: API_URL,
     author: 'Dawid Wysokiński',
     authorEmail: 'contact@dwysokinski.me',
     contactUrl: 'https://dwysokinski.me/#contact',
     scriptsUrl: 'https://github.com/tribalwarshelp/scripts',
-    siteUrl,
-    baseUrl,
+    siteUrl: SITE_URL,
+    baseUrl: DOMAIN,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: siteUrl,
-        sitemap: siteUrl + '/sitemap.xml',
+        host: SITE_URL,
+        sitemap: SITE_URL + '/sitemap.xml',
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
@@ -77,7 +77,14 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: 'twhelp',
         // URL to query from
-        url: apiUrl + '/graphql',
+        url: API_URL + '/graphql',
+      },
+    },
+    {
+      resolve: `@kichiyaki/gatsby-plugin-plausible`,
+      options: {
+        domain: DOMAIN,
+        customDomain: process.env.PLAUSIBLE_CUSTOM_DOMAIN,
       },
     },
   ],
