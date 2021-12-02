@@ -1,4 +1,4 @@
-FROM node:14.18.1-alpine as build-deps
+FROM node:14.18.2-alpine as build-deps
 
 ARG PLAUSIBLE_CUSTOM_DOMAIN=""
 
